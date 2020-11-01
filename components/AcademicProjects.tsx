@@ -29,6 +29,7 @@ class AcademicProjects extends Component {
                     demo: "https://n-queens.buds1.repl.run/",
                     source:
                         "https://github.com/bud-smith/University-Projects/tree/main/N-Queens",
+                    image: "../images/n-queens.png",
                 },
                 {
                     id: 1,
@@ -47,6 +48,7 @@ class AcademicProjects extends Component {
                         "https://appetize.io/app/dadcbhk6xkj3p3gf5cv35xxjfc?device=pixel4xl&scale=75&orientation=portrait&osVersion=10.0&deviceColor=black",
                     source:
                         "https://github.com/bud-smith/University-Projects/tree/main/Alarm-Surgo",
+                    image: "../images/alarm.png",
                 },
             ],
         };
@@ -59,9 +61,11 @@ class AcademicProjects extends Component {
                 <p className="centre-text">
                     This is a set of my notable academic projects/assignments.
                 </p>
-                <AcademicProjectsCardContainer
-                    academic_projects_list_prop={this.state}
-                />
+                <div className="grid-container">
+                    <AcademicProjectsCardContainer
+                        academic_projects_list_prop={this.state}
+                    />
+                </div>
             </div>
         );
     }

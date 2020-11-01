@@ -29,7 +29,14 @@ class Entry extends Component {
 
                     .entry-div-text {
                         font-family: "Open Sans";
-                        font-size: 56px;
+                    }
+
+                    h1 {
+                        font-size: 64px;
+                    }
+
+                    h2 {
+                        font-size: 48px;
                     }
 
                     .text-stroke {

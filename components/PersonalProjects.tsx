@@ -36,6 +36,7 @@ class PersonalProjects extends Component {
                         "GitHub",
                     ],
                     source: "https://github.com/bud-smith/Portfolio",
+                    image: "../images/code.png",
                 },
             ],
         };
@@ -49,9 +50,11 @@ class PersonalProjects extends Component {
                     This is a set of my notable personal projects. Due to grow
                     soon.
                 </p>
-                <PersonalProjectsCardContainer
-                    personal_projects_list_prop={this.state}
-                />
+                <div className="grid-container">
+                    <PersonalProjectsCardContainer
+                        personal_projects_list_prop={this.state}
+                    />
+                </div>
             </div>
         );
     }
