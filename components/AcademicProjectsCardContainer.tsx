@@ -56,11 +56,7 @@ export default class AcademicProjectsCardContainer extends Component {
     render() {
         return this.state.academic_projects_list.map(
             (academic_projects_list) => (
-                <ModalView
-                    academic_projects_list_prop={
-                        this.state.academic_projects_list
-                    }
-                >
+                <ModalView projects_list_prop={academic_projects_list}>
                     <div className="grid-item card-hover">
                         <div className="card text-white bg-primary mb-3">
                             <div className="card-header">
