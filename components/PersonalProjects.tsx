@@ -1,47 +1,7 @@
-import styles from "../styles/Home.module.css";
 import React, { Component } from "react";
 import PersonalProjectsCardContainer from "./PersonalProjectsCardContainer";
 
-interface IPersonalProjectsList {
-    [index: number]: {
-        id?: number;
-        name?: string;
-        description?: string;
-        technologies?: string;
-        demo?: string;
-        source?: string;
-    };
-}
-
-class PersonalProjects extends Component {
-    constructor(props: IPersonalProjectsList) {
-        super(props);
-
-        this.state = {
-            personal_projects_list: [
-                {
-                    id: 0,
-                    name: "Portfolio",
-                    category: "Front-end Web Development",
-                    description:
-                        "Personal portfolio that showcases my notable software projects.",
-                    technologies: [
-                        "next.js",
-                        "react.js",
-                        "JSX",
-                        "TypeScript",
-                        "HTML5",
-                        "CSS",
-                        "Git",
-                        "GitHub",
-                    ],
-                    source: "https://github.com/bud-smith/Portfolio",
-                    image: "../images/code.png",
-                },
-            ],
-        };
-    }
-
+export default class PersonalProjects extends Component {
     render() {
         return (
             <div id="personal-projects" className="project-div">
@@ -51,13 +11,9 @@ class PersonalProjects extends Component {
                     soon.
                 </p>
                 <div className="grid-container">
-                    <PersonalProjectsCardContainer
-                        personal_projects_list_prop={this.state}
-                    />
+                    <PersonalProjectsCardContainer />
                 </div>
             </div>
         );
     }
 }
-
-export default PersonalProjects;
