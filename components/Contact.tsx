@@ -1,7 +1,6 @@
-import styles from "../styles/Home.module.css";
 import React, { Component } from "react";
 
-class Contact extends Component {
+export default class Contact extends Component {
     render() {
         return (
             <div className="project-div" id="contact">
@@ -11,5 +10,3 @@ class Contact extends Component {
         );
     }
 }
-
-export default Contact;

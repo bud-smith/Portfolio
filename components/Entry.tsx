@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.css";
 import React, { Component } from "react";
 
-class Entry extends Component {
+export default class Entry extends Component {
     render() {
         return (
             <div className="entry-div parallax">
@@ -49,5 +49,3 @@ class Entry extends Component {
         );
     }
 }
-
-export default Entry;
