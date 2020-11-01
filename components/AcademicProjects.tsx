@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.css";
 import React, { Component } from "react";
 import AcademicProjectsCardContainer from "./AcademicProjectsCardContainer";
+import Example from "../components/ModalView";
 
 interface IAcademicProjectsList {
     [index: number]: {

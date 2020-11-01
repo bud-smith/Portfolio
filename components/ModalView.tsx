@@ -1,8 +1,6 @@
-import styles from "../styles/Home.module.css";
-import React, { Component } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import { useState } from "react";
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -32,14 +30,12 @@ function MyVerticallyCenteredModal(props) {
     );
 }
 
-export default function Example() {
+const ModalView = (props) => {
     const [modalShow, setModalShow] = React.useState(false);
 
     return (
         <>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
-                Launch vertically centered modal
-            </Button>
+            <div onClick={() => setModalShow(true)}>{props.children}</div>
 
             <MyVerticallyCenteredModal
                 show={modalShow}
@@ -47,4 +43,6 @@ export default function Example() {
             />
         </>
     );
-}
+};
+
+export default ModalView;
