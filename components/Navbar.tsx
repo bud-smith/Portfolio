@@ -1,65 +1,31 @@
 import { Component } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
+import Navbar from "react-bootstrap/Navbar";
+import React from "react";
+import { Nav, NavDropdown } from "react-bootstrap";
 
-export default class Navbar extends Component {
+export default class NavbarComponent extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="#">
-                    Bud Smith
-                </a>
-
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarColor02"
-                    aria-controls="navbarColor02"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarColor02">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="/#">
-                                Home
-                                <span className="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#personal-projects">
-                                Personal Projects
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#academic-projects">
-                                Academic Projects
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#contact">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-
-                    <form className="form-inline my-2 my-lg-0">
-                        <input
-                            className="form-control mr-sm-2"
-                            type="text"
-                            placeholder="Search"
-                        />
-                        <button
-                            className="btn btn-secondary my-2 my-sm-0"
-                            type="submit"
-                        >
-                            Search
-                        </button>
-                    </form>
-                </div>
-            </nav>
+            <Navbar
+                className="navbar navbar-expand-lg navbar-dark"
+                bg="dark"
+                expand="lg"
+            >
+                <Navbar.Brand href="#home">Bud Smith</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#personal-projects">
+                            Personal Projects
+                        </Nav.Link>
+                        <Nav.Link href="#academic-projects">
+                            Academic Projects
+                        </Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         );
     }
 }

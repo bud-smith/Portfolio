@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
+import NavbarComponent from "../components/Navbar";
 
 const Layout = (props) => (
     <div>
@@ -11,7 +11,7 @@ const Layout = (props) => (
                 href="https://bootswatch.com/4/slate/bootstrap.min.css"
             />
         </Head>
-        <Navbar />
+        <NavbarComponent />
         {props.children}
     </div>
 );

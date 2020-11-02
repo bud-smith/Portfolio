@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class Entry extends Component {
     render() {
         return (
-            <div className="entry-div parallax">
+            <div id="home" className="entry-div parallax">
                 <h1 className="text-stroke entry-div-text">BUD SMITH</h1>
                 <h2 className="text-stroke entry-div-text">
                     SOFTWARE DEVELOPER
