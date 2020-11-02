@@ -58,7 +58,7 @@ export default class AcademicProjectsCardContainer extends Component {
             (academic_projects_list) => (
                 <ModalView projects_list_prop={academic_projects_list}>
                     <div className="grid-item card-hover">
-                        <div className="card text-white bg-primary mb-3">
+                        <div className="card text-white bg-primary">
                             <div className="card-header">
                                 {academic_projects_list.category}
                             </div>
