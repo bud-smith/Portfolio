@@ -12,17 +12,29 @@ export default class NavbarComponent extends Component {
                 bg="dark"
                 expand="lg"
             >
-                <Navbar.Brand href="#home">Bud Smith</Navbar.Brand>
+                <Navbar.Brand as={Link} to="home">
+                    Bud Smith
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#personal-projects">
+                    <Nav className="navbar-nav mr-auto">
+                        <Nav.Link
+                            as={Link}
+                            to="personal-projects"
+                            className="nav-link"
+                        >
                             Personal Projects
                         </Nav.Link>
-                        <Nav.Link href="#academic-projects">
+                        <Nav.Link
+                            as={Link}
+                            to="academic-projects"
+                            className="nav-link"
+                        >
                             Academic Projects
                         </Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Link as={Link} to="contact" className="nav-link">
+                            Contact
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
