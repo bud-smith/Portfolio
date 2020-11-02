@@ -47,14 +47,17 @@ export default class PersonalProjectsCardContainer extends Component {
                 <ModalView projects_list_prop={personal_projects_list}>
                     <div className="grid-item card-hover">
                         <div className="card text-white bg-primary">
-                            <div className="card-header">
+                            <div className="card-header noselect">
                                 {personal_projects_list.category}
                             </div>
 
-                            <img src={personal_projects_list.image} />
+                            <img
+                                className="noselect"
+                                src={personal_projects_list.image}
+                            />
 
                             <div className="card-body">
-                                <h4 className="card-title">
+                                <h4 className="card-title noselect">
                                     {personal_projects_list.name}
                                 </h4>
                             </div>
