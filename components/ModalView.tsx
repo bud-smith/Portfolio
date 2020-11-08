@@ -16,16 +16,20 @@ function VerticallyCenteredModal(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <h4>{props.projects_list_prop.name}</h4>
-                <p>{props.projects_list_prop.description}</p>
-                <ul>
-                    {props.projects_list_prop.technologies.map((item) => (
-                        <img
-                            className="svg-size"
-                            src={"../images/technologies/" + item + ".svg"}
-                        />
-                    ))}
-                </ul>
+                <div>
+                    <h4>{props.projects_list_prop.name}</h4>
+                    <p>{props.projects_list_prop.description}</p>
+                </div>
+                <div>
+                    <ul>
+                        {props.projects_list_prop.technologies.map((item) => (
+                            <img
+                                className="svg-size"
+                                src={"../images/technologies/" + item + ".svg"}
+                            />
+                        ))}
+                    </ul>
+                </div>
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={props.onHide}>Close</Button>
@@ -34,6 +38,22 @@ function VerticallyCenteredModal(props) {
                 .svg-size {
                     max-width: 48px;
                     max-height: 48px;
+                }
+
+                div {
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 75%;
+                    padding: 1rem;
+                }
+
+                p {
+                    text-align: justify;
+                }
+
+                img {
+                    margin: 3px;
                 }
             `}</style>
         </Modal>
