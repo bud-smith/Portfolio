@@ -1,8 +1,14 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Tooltip from "react-bootstrap/Tooltip";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 function VerticallyCenteredModal(props) {
+    const renderTooltip = (props) => (
+        <Tooltip {...props}>Tooltip for the register button</Tooltip>
+    );
+
     return (
         <Modal
             {...props}
@@ -23,10 +29,23 @@ function VerticallyCenteredModal(props) {
                 <div>
                     <ul>
                         {props.projects_list_prop.technologies.map((item) => (
-                            <img
-                                className="svg-size"
-                                src={"../images/technologies/" + item + ".svg"}
-                            />
+                            <OverlayTrigger
+                                placement="top"
+                                overlay={
+                                    <Tooltip id={item}>
+                                        <h4>{item}</h4>
+                                    </Tooltip>
+                                }
+                            >
+                                <img
+                                    className="svg-size"
+                                    src={
+                                        "../images/technologies/" +
+                                        item +
+                                        ".svg"
+                                    }
+                                />
+                            </OverlayTrigger>
                         ))}
                     </ul>
                 </div>
@@ -44,7 +63,7 @@ function VerticallyCenteredModal(props) {
                     display: table-cell;
                     text-align: center;
                     vertical-align: middle;
-                    width: 75%;
+                    width: 65%;
                     padding: 1rem;
                 }
 
