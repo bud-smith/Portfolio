@@ -14,12 +14,12 @@ export default function Home() {
             <PersonalProjects />
 
             {/* Thematic break */}
-            <hr />
+            <hr className="anti-hood" />
 
             <AcademicProjects />
 
             {/* Thematic break */}
-            <hr />
+            <hr className="anti-hood" />
 
             <Contact />
 

@@ -8,11 +8,12 @@ export default class NavbarComponent extends Component {
     render() {
         return (
             <Navbar
+                sticky="top"
                 className="navbar navbar-expand-lg navbar-dark"
                 bg="dark"
                 expand="lg"
             >
-                <Navbar.Brand as={Link} to="home">
+                <Navbar.Brand as={Link} to="home" className="noselect">
                     Bud Smith
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -21,18 +22,22 @@ export default class NavbarComponent extends Component {
                         <Nav.Link
                             as={Link}
                             to="personal-projects"
-                            className="nav-link"
+                            className="nav-link noselect"
                         >
                             Personal Projects
                         </Nav.Link>
                         <Nav.Link
                             as={Link}
                             to="academic-projects"
-                            className="nav-link"
+                            className="nav-link noselect"
                         >
                             Academic Projects
                         </Nav.Link>
-                        <Nav.Link as={Link} to="contact" className="nav-link">
+                        <Nav.Link
+                            as={Link}
+                            to="contact"
+                            className="nav-link noselect"
+                        >
                             Contact
                         </Nav.Link>
                     </Nav>

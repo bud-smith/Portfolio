@@ -4,16 +4,26 @@ import React, { Component } from "react";
 export default class Entry extends Component {
     render() {
         return (
-            <div id="home" className="entry-div parallax">
-                <h1 className="text-stroke entry-div-text">BUD SMITH</h1>
-                <h2 className="text-stroke entry-div-text">
-                    SOFTWARE DEVELOPER
-                </h2>
+            <div id="home" className="top-div">
+                <div className="parallax entry-div">
+                    <div>
+                        <h1 className="text-stroke entry-div-text">
+                            BUD SMITH
+                        </h1>
+                        <h2 className="text-stroke entry-div-text">
+                            SOFTWARE DEVELOPER
+                        </h2>
+                    </div>
+                </div>
 
                 <style jsx>{`
+                    .top-div {
+                        overflow: hidden;
+                    }
+
                     .entry-div {
-                        min-height: 25vh;
-                        padding: 5.8vh 0;
+                        min-height: 32vh;
+                        padding: 9.5vh 0;
                         text-align: center;
                         justify-content: center;
                         align-items: center;
@@ -25,6 +35,9 @@ export default class Entry extends Component {
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
+
+                        transform: scale(1.25);
+                        overflow: auto;
                     }
 
                     .entry-div-text {
@@ -32,11 +45,11 @@ export default class Entry extends Component {
                     }
 
                     h1 {
-                        font-size: 64px;
+                        font-size: 56px;
                     }
 
                     h2 {
-                        font-size: 48px;
+                        font-size: 38px;
                     }
 
                     .text-stroke {
