@@ -96,8 +96,10 @@ function VerticallyCenteredModal(props) {
                 }
 
                 .wrapper {
-                    text-align: left;
                     margin: 0px auto 0px 0px;
+                }
+                ul {
+                    padding: 0px 0px 0px 0px;
                 }
             `}</style>
         </Modal>
