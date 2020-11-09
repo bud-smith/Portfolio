@@ -25,8 +25,6 @@ function VerticallyCenteredModal(props) {
                 <div>
                     <h4>{props.projects_list_prop.name}</h4>
                     <p>{props.projects_list_prop.description}</p>
-                </div>
-                <div>
                     <ul>
                         {props.projects_list_prop.technologies.map((item) => (
                             <OverlayTrigger
@@ -51,6 +49,33 @@ function VerticallyCenteredModal(props) {
                 </div>
             </Modal.Body>
             <Modal.Footer>
+                <div className="wrapper">
+                    {(() => {
+                        if (props.projects_list_prop.demo) {
+                            return (
+                                <Button
+                                    href={props.projects_list_prop.demo}
+                                    target="_blank"
+                                >
+                                    Demo
+                                </Button>
+                            );
+                        }
+                    })()}
+
+                    {(() => {
+                        if (props.projects_list_prop.source) {
+                            return (
+                                <Button
+                                    href={props.projects_list_prop.source}
+                                    target="_blank"
+                                >
+                                    Source
+                                </Button>
+                            );
+                        }
+                    })()}
+                </div>
                 <Button onClick={props.onHide}>Close</Button>
             </Modal.Footer>
             <style jsx>{`
@@ -60,11 +85,8 @@ function VerticallyCenteredModal(props) {
                 }
 
                 div {
-                    display: table-cell;
                     text-align: center;
                     vertical-align: middle;
-                    width: 65%;
-                    padding: 1rem;
                 }
 
                 p {
@@ -73,6 +95,11 @@ function VerticallyCenteredModal(props) {
 
                 img {
                     margin: 3px;
+                }
+
+                .wrapper {
+                    text-align: left;
+                    margin: 0px auto 0px 0px;
                 }
             `}</style>
         </Modal>
