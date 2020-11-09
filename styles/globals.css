@@ -25,7 +25,7 @@ a {
     text-align: center;
 }
 
-.project-div {
+.segment {
     min-height: 25vh;
     padding: 25px;
 }
@@ -88,10 +88,9 @@ img {
     -o-user-drag: none;
 }
 
-.hood {
-    padding-top: 64px;
-}
-
-.anti-hood {
-    margin-top: 64px;
+a.anchor {
+    display: block;
+    position: relative;
+    top: -56px;
+    visibility: hidden;
 }

@@ -21,14 +21,14 @@ export default class NavbarComponent extends Component {
                     <Nav className="navbar-nav mr-auto">
                         <Nav.Link
                             as={Link}
-                            to="personal-projects"
+                            to="top"
                             className="nav-link noselect"
                         >
                             Personal Projects
                         </Nav.Link>
                         <Nav.Link
                             as={Link}
-                            to="academic-projects"
+                            to="middle"
                             className="nav-link noselect"
                         >
                             Academic Projects

@@ -11,15 +11,21 @@ export default function Home() {
         <Layout>
             <Entry />
 
+            <a className="anchor" id="top"></a>
+
             <PersonalProjects />
 
             {/* Thematic break */}
             <hr className="anti-hood" />
 
+            <a className="anchor" id="middle"></a>
+
             <AcademicProjects />
 
             {/* Thematic break */}
             <hr className="anti-hood" />
+
+            <a className="anchor" id="bottom"></a>
 
             <Contact />
 

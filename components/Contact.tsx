@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Contact extends Component {
     render() {
         return (
-            <div className="project-div hood" id="contact">
+            <div className="segment" id="contact">
                 <h2 className="centre-text">Contact</h2>
                 <p className="centre-text">Link with me here...</p>
                 <a
