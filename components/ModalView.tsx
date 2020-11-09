@@ -5,10 +5,6 @@ import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 function VerticallyCenteredModal(props) {
-    const renderTooltip = (props) => (
-        <Tooltip {...props}>Tooltip for the register button</Tooltip>
-    );
-
     return (
         <Modal
             {...props}
@@ -25,6 +21,7 @@ function VerticallyCenteredModal(props) {
                 <div>
                     <h4>{props.projects_list_prop.name}</h4>
                     <p>{props.projects_list_prop.description}</p>
+                    <hr />
                     <h4>Technologies</h4>
                     <ul>
                         {props.projects_list_prop.technologies.map((item) => (
@@ -37,7 +34,7 @@ function VerticallyCenteredModal(props) {
                                 }
                             >
                                 <img
-                                    className="svg-size"
+                                    className="svg-size noselect"
                                     src={
                                         "../images/technologies/" +
                                         item +
