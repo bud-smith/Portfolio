@@ -25,6 +25,7 @@ function VerticallyCenteredModal(props) {
                 <div>
                     <h4>{props.projects_list_prop.name}</h4>
                     <p>{props.projects_list_prop.description}</p>
+                    <h4>Technologies</h4>
                     <ul>
                         {props.projects_list_prop.technologies.map((item) => (
                             <OverlayTrigger
