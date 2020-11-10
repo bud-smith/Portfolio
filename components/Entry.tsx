@@ -45,7 +45,7 @@ export default class Entry extends Component {
                     }
 
                     h1 {
-                        font-size: 56px;
+                        font-size: 52px;
                     }
 
                     h2 {
