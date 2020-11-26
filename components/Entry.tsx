@@ -1,4 +1,3 @@
-import styles from "../styles/Home.module.css";
 import React, { Component } from "react";
 
 export default class Entry extends Component {
