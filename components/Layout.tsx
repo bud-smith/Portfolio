@@ -10,6 +10,8 @@ const Layout = (props) => (
                 rel="stylesheet"
                 href="https://bootswatch.com/4/slate/bootstrap.min.css"
             />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css"></link>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"></link>
         </Head>
         <NavbarComponent />
         {props.children}
