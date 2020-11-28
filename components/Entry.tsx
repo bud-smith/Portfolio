@@ -40,7 +40,7 @@ export default class Entry extends Component {
                     }
 
                     .entry-div-text {
-                        font-family: "Open Sans";
+                        font-family: "Fira Code";
                     }
 
                     h1 {
