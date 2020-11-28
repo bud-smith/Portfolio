@@ -6,27 +6,26 @@ export default class Contact extends Component {
             <div className="segment" id="contact">
                 <h2 className="centre-text">Contact</h2>
                 <p className="centre-text">Link with me here...</p>
-                <a
-                    href="https://github.com/bud-smith/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/bud-smith/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a>
-                <a
-                    href="mailto:budsmith135@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Email
-                </a>
+                <div>
+                    <a href="https://github.com/bud-smith/" target="_blank" rel="noopener noreferrer">
+                        <img src="../images/technologies/github.svg" alt="GitHub logo"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bud-smith/" target="_blank" rel="noopener noreferrer">
+                        <img src="../images/technologies/linkedin.svg" alt="LinkedIn logo"/>
+                    </a>
+                    <a href="mailto:budsmith135@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img src="../images/technologies/mail.svg" alt="Email logo"/>
+                    </a>
+                </div>
+                <style jsx>{`
+                    div {
+                        text-align: center;
+                    }
+
+                    a {
+                        padding: 12px
+                    }
+                `}</style>
             </div>
         );
     }
